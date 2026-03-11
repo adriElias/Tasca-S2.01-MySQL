@@ -109,20 +109,16 @@ Develop a relational database for an optical store that enables:
 
 ## 📁 Project Structure
 
-```
-S201-MySQL/
-├── docker-compose.yml          # Docker Compose configuration
-├── .env                        # Environment variables (DO NOT commit - keep locally)
-├── .env.example                # Template for environment variables (safe to commit)
-├── .gitignore                  # Git ignore rules (prevents committing .env)
+```text
+n1e1-OpticalStore/
+├── README.md                          # This file
 ├── model/
-│   └── optical_store.mwb       # MySQL Workbench model
+│   └── optical_store.mwb              # MySQL Workbench model
 ├── doc/
-│   └── [Diagrams and documentation]
-├── sql/
-│   ├── optical_store.sql       # Schema and table creation
-│   └── inserts_optical_store.sql # Demonstration data
-└── README.md                   # This file
+│   └── optical_store.png              # Entity-Relationship Diagram (E-R)
+└── sql/
+    ├── optical_store.sql              # Schema and table creation
+    └── inserts_optical_store.sql      # Demonstration data
 ```
 
 ## 🧩 Diagrams and Technical Decision Justification

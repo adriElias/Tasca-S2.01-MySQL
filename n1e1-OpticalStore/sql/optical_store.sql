@@ -17,7 +17,7 @@ id_supplier INT NOT NULL AUTO_INCREMENT,
 name VARCHAR(45) NOT NULL,
 phone_number VARCHAR(45) NOT NULL,
 fax VARCHAR(45) NULL,
-nif VARCHAR(45) NOT NULL,
+nif VARCHAR(45) NOT NULL UNIQUE,
 id_address INT NOT NULL,
 CONSTRAINT pk_supplier PRIMARY KEY (id_supplier),
 CONSTRAINT fk_supplier_address FOREIGN KEY (id_address) REFERENCES optical_store.ADDRESS(id_address));
@@ -67,7 +67,7 @@ id_glasses INT NOT NULL,
 id_customer INT NOT NULL,
 id_employee INT NOT NULL,
 sale_date DATE NOT NULL,
-price DECIMAL(4,2) NOT NULL,
+price DECIMAL(6,2) NOT NULL,
 CONSTRAINT pk_sale PRIMARY KEY (id_sale),
 CONSTRAINT fk_sale_glasses FOREIGN KEY (id_glasses) REFERENCES optical_store.GLASSES (id_glasses)
 ON DELETE CASCADE 
